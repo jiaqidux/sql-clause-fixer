@@ -42,6 +42,17 @@ python fixer.py
 
 Enter a SQL query when prompted, and the agent will return the corrected version. Type `quit` to exit.
 
+## Project structure
+ 
+```
+sql-clause-fixer/
+├── main.py         
+├── schema.py          
+├── requirements.txt   
+├── .env               
+└── .gitignore
+```
+
 ## Example
 
 ```
