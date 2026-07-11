@@ -18,6 +18,8 @@ The agent reorders the clauses into valid SQL syntax and returns:
 
 1. Clone the repo and create a virtual environment:
    ```bash
+   git clone https://github.com/jiaqidux/sql-clause-fixer.git
+   cd sql-clause-fixer
    python -m venv venv
    source venv/bin/activate  # or venv\Scripts\activate on Windows
    ```
@@ -63,5 +65,5 @@ Ordered List Components: ['SELECT', 'FROM', 'WHERE', 'ORDER BY', 'LIMIT']
 
 ## Notes
 
-- Swapping LLM providers only requires changing the model import/init in `fixer.py`; the prompt, schema, and parsing logic stay the same.
+- Swapping LLM providers only requires changing the model import/init in `main.py`; the prompt, schema, and parsing logic stay the same.
 - Free-tier rate limits apply depending on the provider used.
