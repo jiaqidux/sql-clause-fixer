@@ -63,5 +63,5 @@ Ordered List Components: ['SELECT', 'FROM', 'WHERE', 'ORDER BY', 'LIMIT']
 
 ## Notes
 
-- Swapping LLM providers only requires changing the model import/init in `fixer.py`; the prompt, schema, and parsing logic stay the same.
+- Swapping LLM providers only requires changing the model import/init in `main.py`; the prompt, schema, and parsing logic stay the same.
 - Free-tier rate limits apply depending on the provider used.
