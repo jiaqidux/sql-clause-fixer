@@ -1,4 +1,4 @@
-# Simple AI agent to order the basic clauses of a SQL query
+# simple AI agent to order the basic clauses of a SQL query
 from pydantic import BaseModel, Field
 from typing import List, Optional
 

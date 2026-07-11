@@ -37,7 +37,7 @@ The agent reorders the clauses into valid SQL syntax and returns:
 Run the script:
 
 ```bash
-python fixer.py
+python main.py
 ```
 
 Enter a SQL query when prompted, and the agent will return the corrected version. Type `quit` to exit.
