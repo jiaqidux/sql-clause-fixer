@@ -45,6 +45,17 @@ python main.py
 
 Enter a SQL query when prompted, and the agent will return the corrected version, along with whether it passed validation. Type `quit` to exit.
 
+## Project structure
+```
+sql-clause-fixer/
+├── main.py
+├── schema.py
+├── test_fixer.py
+├── requirements.txt
+├── .env
+└── .gitignore
+```
+
 ## Validation
  
 To check that the fixer actually works (not just on easy cases, but on harder ones too) `test_fixer.py` runs it against 10 test queries covering missing JOINs, multiple misplaced clauses, aggregate queries with GROUP BY/HAVING, and subqueries (including a subquery whose own clauses are scrambled, not just the outer query). Each result is checked two ways: whether the corrected query parse as valid SQL with `sqlglot`, and if the reported clauses are actually in the right order.
@@ -64,17 +75,6 @@ Failed (exception raised): 0
 ```
  
 One thing worth being clear about: this checks that the output is syntactically valid SQL with clauses in the correct order, not that the query's meaning was preserved exactly (e.g. column names or conditions weren't accidentally altered). Verifying that would need comparing the structure of the input and output more deeply, which this test suite doesn't currently do.
-
-## Project structure
-```
-sql-clause-fixer/
-├── main.py
-├── schema.py
-├── test_fixer.py
-├── requirements.txt
-├── .env
-└── .gitignore
-```
 
 ## Example
 
